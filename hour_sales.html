@@ -1,0 +1,39 @@
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+	<script src="dateLib.js" type="text/javascript"></script>
+	<script src="utilLib.js" type="text/javascript"></script>
+</head>
+<body>
+	<p id = "test"> </p>
+	<div id = "dateDropDownArea"> </div>
+	<div id = "dateTableArea"> </div>
+	<script>
+		$(document).ready(function() {
+			$.ajax({
+				url: 'http://127.0.0.1:3000/sales',
+				dataType: 'json',
+				success: function(saleData) {
+					selectedDate = getURLParam("selectedDate");
+					console.log(saleData);
+					if (selectedDate == null)
+						selectedDate = findLastestDate(saleData);
+					else
+						selectedDate = new Date(selectedDate);
+					
+					dates = getAllDates(saleData);
+					displayDateDropDown(dates, selectedDate);
+					dateDropDownZoom();
+					
+					
+					hourSales = getHourDateSales(saleData, selectedDate);
+					displayHourDateTable(hourSales);
+				},
+				error: function(req, status, err) {
+					$('#test').html("shit");
+				}
+			})
+		});
+	</script>
+</body>
+</html>
