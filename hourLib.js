@@ -1,3 +1,27 @@
+function getHourSales() {
+	$(document).ready(function() {
+		$.ajax({
+			url: 'http://localhost:3000/sales',
+			dataType: 'json',
+			success: function(saleData) {
+				selectedDate = getURLParam("selectedDate");
+				console.log(saleData);
+				if (selectedDate == null)
+					selectedDate = findLastestDate(saleData);
+				else
+					selectedDate = new Date(selectedDate);
+						
+				dates = getAllDates(saleData);
+				displayDateDropDown(dates, selectedDate);
+				dateDropDownZoom();
+						
+				hourSales = getHourDateSales(saleData, selectedDate);
+				displayHourDateTable(hourSales);
+			}
+		})
+	});
+}
+
 function findLastestDate(saleData) {
 	var dateLatest = new Date(0);
 	for (i in saleData) {
