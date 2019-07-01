@@ -22,9 +22,3 @@ function displaySpeciesSales(speciesSales) {
 	}
 	$('#speciesTableArea').append("</table>");
 }
-
-function toTitleCase(str) {
-	return str.replace(/\w\S*/g, function (i) {
-			return i.charAt(0).toUpperCase() + i.substr(1).toLowerCase();
-	});
-}

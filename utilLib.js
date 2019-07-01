@@ -15,6 +15,18 @@ function getURLParam(param) {
 	return value;
 }
 
+function buildParamURL(param, value) {
+	var curURL = location.protocol + "//" + location.host + location.pathname;
+	var curURL = curURL + "?" + param + "=" + value;
+	return curURL;
+}
+
+function toTitleCase(str) {
+	return str.replace(/\w\S*/g, function (i) {
+			return i.charAt(0).toUpperCase() + i.substr(1).toLowerCase();
+	});
+}
+
 function setCookie(cName, cValue) {
 	var dateExp = new Date();
 	dateExp.setTime(dateExp.getTime() + (24 * 60 * 60 * 1000)); 
@@ -34,4 +46,10 @@ function getCookie(cName) {
 			return sCounter.substring(cName.length);
 	}
 	return "";
+}
+
+function redirectURLOnClick(url, id) {
+	$("#" + id).click(function () {
+		window.location.href = url;
+	});
 }
