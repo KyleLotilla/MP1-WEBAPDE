@@ -16,8 +16,15 @@ function displaySpeciesSales(speciesSales) {
 	
 	for (i in species) {
 		var speciesIndex = toTitleCase(species[i]);
+		console.log(speciesIndex);
 		var row = "<tr><td>" + speciesIndex + "</td><td>" + speciesSales[species[i]] + "</td></tr>";
 		$('#speciesTableArea').append(row);
 	}
 	$('#speciesTableArea').append("</table>");
+}
+
+function toTitleCase(str) {
+	return str.replace(/\w\S*/g, function (i) {
+			return i.charAt(0).toUpperCase() + i.substr(1).toLowerCase();
+	});
 }

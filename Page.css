@@ -1,0 +1,138 @@
+@font-face{
+    font-family: Krusty;
+    src: url(fonts/KrabbyPatty.ttf);
+}
+
+@font-face {
+    font-family: Login;
+    src: url(fonts/Login.ttf);
+}
+
+.header {
+    padding: 15px;
+    background: #add8e6;
+    color: brown;
+    font-family: Krusty;
+    width: auto;
+    text-align: left;
+    background-color: rgb(133, 94, 66);
+}
+
+#header_logo {
+    width: 70px; 
+    height: 59px; 
+    float: left;
+    padding: 0;
+    margin-top: 9px;
+}
+
+h1 {
+    margin-left: 80px;
+    text-align: left;
+    font-family: Krusty;
+    color: rgb(179, 34, 34);
+    text-shadow: 1px 1px black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("images/bikini bottom 1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #b5651d;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.menu li {
+    display: inline-block;
+    color: #666;
+    border-right: 1px solid #bbb;	
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #bfefff;
+    font-family: Krusty;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #FFC0CB;
+    color: rgb(179, 34, 34);
+    text-shadow: 1px 1px black;
+}
+
+.active:enabled {
+    background-color: #FFC0CB;
+    color: red;
+    text-shadow: 1px 1px black;
+}
+
+#btnArea {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 45px;
+}
+
+#prevNavArea, #dateDropDownArea, #nextNavArea{
+	float: left; 
+	margin: 10px 20px;
+}
+
+#prevDateNavButton, #nextDateNavButton {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(255, 255, 46);
+    color: rgb(179, 34, 34);
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+    font-size: 20px;
+    font-family: Login;
+    text-shadow: 2px 2px white;
+    box-shadow: 1px 1px 2px 1px black;
+    border-radius: 10px;
+    border-top: 0.1px solid black;
+    border-left: 0.1px solid black;
+}
+
+#prevDateNavButton:hover, #nextDateNavButton:hover {
+    text-shadow: 4px 4px white;
+}
+
+#prevDateNavButton:active, #nextDateNavButton:active {
+    box-shadow: 2px 2px 2px 1px black inset;
+    transform: translateY(1px) translateX(1px);
+    border-right: 0.1px solid black;
+    border-bottom: 0.1px solid black;
+    opacity: 0.8;
+}
+
+#prevDateNavButton:disabled, #nextDateNavButton:disabled {
+    opacity: 0.5;
+}
+
+#dateTableArea {
+	background-position: center;
+	margin-top: 0;
+	padding: 10px 10px;
+	text-align: center
+}

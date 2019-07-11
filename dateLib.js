@@ -97,4 +97,3 @@ function setDateNavButtonState(date, id) {
 	else
 		$("#" + id).prop('disabled', true);
 }
-	

@@ -20,4 +20,3 @@ function displayBurgerSales(burgerSales) {
 	}
 	$('#burgerTableArea').append("</table>");
 }
-	

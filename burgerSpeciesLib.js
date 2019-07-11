@@ -39,4 +39,3 @@ function burgerDropDownZoom() {
 		window.location.href = url;
 	});
 }
-	

@@ -1,0 +1,32 @@
+#burgerTableArea {
+	background-position: center;
+	text-align: center;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+th {
+	font-size: 20px;
+	border: 1px solid black;
+	height: 20px;
+	width: 300px;
+	background-color: #FFC0CB;
+	font-weight: bolder;
+}
+
+tr, td{
+	height: 20px;
+	width: 300px;
+	font-weight: bolder;
+	font-size: 20px;
+	border: 1px solid black;
+	padding-left: 4px;
+}
+
+tr:nth-child(even) {
+	background-color: #bfefff;
+}
+
+tr:nth-child(odd) {
+	background-color: #00FF00;
+}

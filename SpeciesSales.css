@@ -1,0 +1,54 @@
+.dateselect {
+	position: relative;
+	font-family: Krusty;
+}
+
+.dataselect select{
+	font-size: 14px;
+   	height: 29px;
+  	padding: 5px;
+  	width: 268px;
+  	background-color: #000;
+  	border-radius: 20px;
+}
+
+.salesdata {
+	background-position: center;
+	margin-top: 50px;
+	padding: 10px 10px;
+	text-align: center
+}
+
+.salestable, th{
+	font-size: 20px;
+	border: 1px solid black;
+}
+
+th {
+	height: 20px;
+	width: 300px;
+	background-color: #FFC0CB;
+	font-weight: bolder;
+}
+
+tr, td{
+	height: 20px;
+	width: 300px;
+	font-weight: bolder;
+	font-size: 20px;
+	border: 1px solid black;
+	padding-left: 4px;
+}
+
+tr:nth-child(even) {
+	background-color: #bfefff;
+}
+
+tr:nth-child(odd) {
+	background-color: #00FF00;
+}
+
+#speciesTableArea {
+	padding-top: 20px;
+	padding-left: 20px;
+}

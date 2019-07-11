@@ -1,0 +1,37 @@
+#speciesTableArea {
+	background-position: center;
+	margin-top: 50px;
+	padding: 10px 10px;
+	text-align: center
+}
+
+#burgerDropDownArea{
+	float: left; 
+	margin: 10px 20px;
+}
+
+th {
+	height: 20px;
+	width: 300px;
+	background-color: #FFC0CB;
+	font-size: 20px;
+	border: 1px solid black;
+	font-weight: bolder;
+}
+
+tr, td{
+	height: 20px;
+	width: 300px;
+	font-weight: bolder;
+	font-size: 20px;
+	border: 1px solid black;
+	padding-left: 4px;
+}
+
+tr:nth-child(even) {
+	background-color: #bfefff;
+}
+
+tr:nth-child(odd) {
+	background-color: #00FF00;
+}

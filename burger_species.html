@@ -1,15 +1,31 @@
 <html>
 <head>
+	<title>The Krusty Krab</title>
+	<link rel = "shortcut icon" media = "all" type = "image/png" href = "icons/favicon.ico"> 
+	<link rel="stylesheet" media = "all" type="text/css" href="Page.css">
+	<link rel="stylesheet" media = "all" type="text/css" href="burger_species.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
 	<script src="burgerSpeciesLib.js" type="text/javascript"></script>
 	<script src="utilLib.js" type="text/javascript"></script>
 	<script src="speciesLib.js" type="text/javascript"></script>
 </head>
 <body>
+	<div class = "header">
+		<a href = "Home.html" style = "text-decoration: inherit; color: inherit;"><img src="images/krabby patty 1.png" alt="Krabby Patty" id = "header_logo"></a>
+		<h1><a href = "Home.html" style = "text-decoration: inherit; color: inherit;">The Krusty Krab</a></h1>
+	</div>
+	<ul class = "menu">
+		<li><a href = "home.html">Home</a></li>
+		<li><a href = "hour_sales.html">Daily Hour Sales</a></li>
+		<li><a href = "SpeciesSales.html">Species Sales</a></li>
+		<li><a href = "BurgerSales.html">Burger Sales</a></li>
+		<li><a class = "active" href = "burger_species.html">Burger by Species Sales</a></li>
+		<li><a href = "full_data_sale.html">Full Data Sales</a></li>
+		<li><a href = "upload.html">Upload Data</a></li>
+		<li style = "float: right; border-left: 1px solid #bbb"><a href = "Login.html">Logout</a></li>
+	</ul>
 	<div id = "burgerDropDownArea"> </div>
 	<div id = "speciesTableArea"> </div>
-	<script> 
-			getBurgerSpeciesSales(); 	
-	</script>
+	<script> getBurgerSpeciesSales(); </script>
 </body>
 </html>
