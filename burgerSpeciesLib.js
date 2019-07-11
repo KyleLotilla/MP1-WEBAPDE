@@ -1,7 +1,7 @@
 function getBurgerSpeciesSales() {
 	$(document).ready(function() {
 		$.ajax({
-			url: "http://localhost:3000/burger_by_species",
+			url: "http://127.0.0.1:3000/burger_by_species",
 			dataType: "json",
 			success: function(burgerSpeciesSales) {
 				selectedBurger = getURLParam("selectedBurger");

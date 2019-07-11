@@ -16,14 +16,14 @@ function updateJSON() {
 
 function updateBurgerSales(jsonFile) {
 	$.ajax({
-		url: 'http://localhost:3000/burger_sales',
+		url: 'http://127.0.0.1:3000/burger_sales',
 		dataType: 'json',
 		success: function (burgerSales) {
 			var updatedBurgerSales = countBurgerSales(burgerSales, jsonFile);
 			var updatedBurgerSaleJSON = buildBurgerSaleJSON(updatedBurgerSales);
 			$.ajax({
 				type: "PUT",
-				url: 'http://localhost:3000/burger_sales',
+				url: 'http://127.0.0.1:3000/burger_sales',
 				data: updatedBurgerSaleJSON,
 				contentType: 'application/json',
 				success: function () {
@@ -54,14 +54,14 @@ function buildBurgerSaleJSON(burgerSales) {
 
 function updateSpeciesSales(jsonFile) {
 	$.ajax({
-		url: 'http://localhost:3000/species_sales',
+		url: 'http://127.0.0.1:3000/species_sales',
 		dataType: 'json',
 		success: function (speciesSales) {
 			var updatedSpeciesSales = countSpeciesSales(speciesSales, jsonFile);
 			var updatedSpeciesSalesJSON = buildSpeciesSaleJSON(updatedSpeciesSales);
 			$.ajax({
 				type: "PUT",
-				url: 'http://localhost:3000/species_sales',
+				url: 'http://127.0.0.1:3000/species_sales',
 				data: updatedSpeciesSalesJSON,
 				contentType: 'application/json',
 				success: function () {
@@ -97,14 +97,14 @@ function buildSpeciesSaleJSON(speciesSales) {
 
 function updateBurgerSpeciesSales(jsonFile) {
 	$.ajax({
-		url: 'http://localhost:3000/burger_by_species',
+		url: 'http://127.0.0.1:3000/burger_by_species',
 		dataType: 'json',
 		success: function (burgerSpeciesSales) {
 			var updatedBurgerSpeciesSales = countBurgerSpeciesSales(burgerSpeciesSales, jsonFile);
 			var updatedBurgerSpeciesJSON = buildBurgerSpeciesJSON(updatedBurgerSpeciesSales);
 			$.ajax({
 				type: "PUT",
-				url: 'http://localhost:3000/burger_by_species',
+				url: 'http://127.0.0.1:3000/burger_by_species',
 				data: updatedBurgerSpeciesJSON,
 				contentType: 'application/json',
 				success: function () {
@@ -147,7 +147,7 @@ function buildBurgerSpeciesJSON(burgerSpeciesSales) {
 function updateSales(jsonFile) {
 	$.ajax({
 		type: "PATCH",
-		url: 'http://localhost:3000/sales',
+		url: 'http://127.0.0.1:3000/sales',
 		data: JSON.stringify(jsonFile),
 		contentType: 'application/json',
 		success: function () {

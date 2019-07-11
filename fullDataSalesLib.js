@@ -1,7 +1,7 @@
 function getFullDataSales() {
 	$(document).ready(function() {
 		$.ajax({
-			url: 'http://localhost:3000/sales',
+			url: 'http://127.0.0.1:3000/sales',
 			dataType: 'json',
 			success: function(saleData) {
 				selectedDate = getURLParam("selectedDate");

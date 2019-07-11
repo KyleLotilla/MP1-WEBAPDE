@@ -1,7 +1,7 @@
 function getSpeciesSales() {
 	$(document).ready(function () {
 		$.ajax({
-			url: 'http://localhost:3000/species_sales',
+			url: 'http://127.0.0.1:3000/species_sales',
 			dataType: 'json',
 			success: function (speciesSales) {
 				displaySpeciesSales(speciesSales);
